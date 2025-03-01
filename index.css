@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container::before {
+    /* content: "Before Content"; */
+    display: block;
+    color: #555;
+    font-size: 140px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.container::after {
+    /* content: "After Content"; */
+    display: block;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
