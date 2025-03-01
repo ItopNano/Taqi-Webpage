@@ -1,82 +1,105 @@
-.profile_1{
-    height: 900px;
-    width: 100%;
-    /* background-color: aliceblue; */
-}
-.h_2{
-    border-bottom: 4px solid color-mix(in srgb, rgb(255, 118, 118) 40%, blue 30%);
-    width: 120px;
-    border-top: 4px solid color-mix(in srgb, rgb(0, 4, 255) 40%, rgb(140, 0, 255) 30%);
-}
-.card_1{
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #0e0e0e;
     color: white;
-    height: 350px;
-    width: 300px;
-    background: rgb(45, 47, 66);
-    border-radius: 10px;
-    position: relative;
-    margin: 0 auto;
-    padding: 2em;
-    overflow: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+
+/* Profile Container */
+.profile-container {
+    width: 80%;
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Profile Title */
+.profile-title {
+    border-bottom: 4px solid #ff7676;
+    width: fit-content;
+    margin: 20px auto 40px;
+    padding-bottom: 5px;
+    border-top: 4px solid #4000ff;
+}
+
+/* Cards Container */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Increased spacing between cards */
+    margin-bottom: 50px;
+}
+
+/* Card Styling */
+.card {
+    width: 300px;
+    height: 350px;
+    background: rgb(45, 47, 66);
+    color: white;
+    border-radius: 10px;
+    padding: 2em;
+    position: relative;
+    overflow: visible;
+    text-align: center;
+}
+
+/* Gradient Border Effect */
+.card::after, 
+.card::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 5px;
+    border-radius: 10px;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    animation: spin 3s linear infinite;
+}
+
+.card::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+/* Animation */
 @property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
 }
 
-.card_1::after, .card_1::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: red;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    padding: 5px;
-    overflow: visible;
-    border-radius: 10px;
-    background-image: conic-gradient(from var(--angle),#ff4545 ,#00ff99 ,#006aff , #ff0095, #ff4545);
-    animation: spin 3s linear infinite;
-}
-
-.card_1::before {
-    filter: blur(1.5rem);
-    opacity: 0.5;
-}
-
 @keyframes spin {
-    from {
-        --angle: 0deg;
-    }
-    to {
-        --angle: 360deg;
-    }
+    from { --angle: 0deg; }
+    to { --angle: 360deg; }
 }
 
-html, body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* transform: scale(1.5); */
-}
+/* Back Button */
 .btn {
+    display: inline-block;
+    margin-top: 20px;
     padding: 15px 40px;
     border: none;
     outline: none;
     color: #FFF;
     cursor: pointer;
-    position: relative;
-    z-index: 0;
     background-color: transparent;
     border-radius: 10px;
     text-decoration: none;
+    position: relative;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+/* Button Glow Effect */
 .btn::after {
     content: '';
     z-index: -1;
@@ -92,15 +115,7 @@ html, body{
 .btn::before {
     content: '';
     background: linear-gradient(
-        45deg,
-        #FF0000,
-        #FF7300,
-        #FFFB00,
-        #48FF00,
-        #00FFD5,
-        #002BFF,
-        #FF00C8,
-        #FF0000
+        45deg, #FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000
     );
     position: absolute;
     top: -2px;
@@ -134,4 +149,50 @@ html, body{
 .btn:active {
     color: #000;
     font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        width: 95%;
+        padding: 30px 0;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+        padding: 1.5em;
+    }
+
+    .profile-title {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-title {
+        font-size: 1.2rem;
+        width: auto;
+    }
+
+    .card {
+        width: 100%;
+        padding: 1.2em;
+    }
+
+    .btn {
+        width: 80%;
+        font-size: 0.9rem;
+    }
 }
