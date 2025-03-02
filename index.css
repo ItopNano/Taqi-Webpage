@@ -190,17 +190,17 @@ body {
     background-color: aliceblue;
 }
 
-#a12 {
+#at12 {
     border: 2px solid rgb(182, 205, 255);
     border-radius: 0%;
     transition: .5s;
 }
-#a12:hover {
+#at12:hover {
     border: 2px solid rgb(71, 129, 255);
     background-color: #8cd1ff;
     border-radius: 5px;
 }
-#a12:active {
+#at12:active {
     background-color: #ffffff;
     border-radius: 0%;
 }
