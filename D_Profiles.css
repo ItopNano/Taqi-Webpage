@@ -20,11 +20,14 @@ body {
 
 /* Profile Title */
 .profile-title {
-    border-bottom: 4px solid #ff7676;
-    width: fit-content;
+    border-bottom: 4px solid #4000ff;
+    border-left: 2px dashed #81a3ff;
+    border-right: 2px dashed #81a3ff;
+    width: 120px;
     margin: 20px auto 40px;
     padding-bottom: 5px;
     border-top: 4px solid #4000ff;
+    font-size: 1.8rem;
 }
 
 /* Cards Container */
@@ -32,12 +35,12 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px; /* Increased spacing between cards */
+    gap: 30px;
     margin-bottom: 50px;
 }
 
 /* Card Styling */
-.card {
+.card, .card2, .card3, .card4, .card5, .card6 {
     width: 300px;
     height: 350px;
     background: rgb(45, 47, 66);
@@ -50,8 +53,12 @@ body {
 }
 
 /* Gradient Border Effect */
-.card::after, 
-.card::before {
+.card::after, .card::before,
+.card2::after, .card2::before,
+.card3::after, .card3::before,
+.card4::after, .card4::before,
+.card5::after, .card5::before,
+.card6::after, .card6::before {
     content: '';
     position: absolute;
     height: 100%;
@@ -66,7 +73,8 @@ body {
     animation: spin 3s linear infinite;
 }
 
-.card::before {
+.card::before, .card2::before, .card3::before, 
+.card4::before, .card5::before, .card6::before {
     filter: blur(1.5rem);
     opacity: 0.5;
 }
@@ -152,6 +160,12 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .profile-container {
+        width: 90%;
+    }
+}
+
 @media (max-width: 768px) {
     .profile-container {
         width: 95%;
@@ -164,7 +178,7 @@ body {
         gap: 20px;
     }
 
-    .card {
+    .card, .card2, .card3, .card4, .card5, .card6 {
         width: 90%;
         height: auto;
         padding: 1.5em;
@@ -186,7 +200,7 @@ body {
         width: auto;
     }
 
-    .card {
+    .card, .card2, .card3, .card4, .card5, .card6 {
         width: 100%;
         padding: 1.2em;
     }
@@ -195,4 +209,35 @@ body {
         width: 80%;
         font-size: 0.9rem;
     }
+}
+
+.card img{
+    width: 100px;
+    border-radius: 100%;
+    border: 2px solid#000;
+}
+.card2 img{
+    width: 100px;
+    border-radius: 100%;
+    border: 2px solid#000;
+}
+.card3 img{
+    width: 100px;
+    border-radius: 100%;
+    border: 2px solid#000;
+}
+.card4 img{
+    width: 100px;
+    border-radius: 100%;
+    border: 2px solid#000;
+}
+.card5 img{
+    width: 100px;
+    border-radius: 100%;
+    border: 2px solid#000;
+}
+.card6 img{
+    width: 100px;
+    border-radius: 100%;
+    border: 2px solid#000;
 }
