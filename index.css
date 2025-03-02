@@ -190,17 +190,17 @@ body {
     background-color: aliceblue;
 }
 
-#at12 {
+.About_Profile_Resume a{
     border: 2px solid rgb(182, 205, 255);
     border-radius: 0%;
     transition: .5s;
 }
-#at12:hover {
+.About_Profile_Resume a:hover {
     border: 2px solid rgb(71, 129, 255);
     background-color: #8cd1ff;
     border-radius: 5px;
 }
-#at12:active {
+.About_Profile_Resume a:active {
     background-color: #ffffff;
     border-radius: 0%;
 }
