@@ -24,6 +24,15 @@ recognition.onresult = function(event){
     if(speech == "my selfie please"){
         capture();
     }
+    else if(speech == "My selfie please"){
+        capture();
+    }
+    else if(speech == "My selfie please."){
+        capture();
+    }
+    else if(speech == "my selfie please."){
+        capture();
+    }
 
 
 
