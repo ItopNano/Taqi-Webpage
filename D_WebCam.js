@@ -35,7 +35,6 @@ recognition.onresult = function(event){
     }
 
 
-
 }
 
 
