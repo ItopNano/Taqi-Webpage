@@ -28,6 +28,7 @@ body {
     padding-bottom: 5px;
     border-top: 4px solid #4000ff;
     font-size: 1.8rem;
+    border-radius: 50px;
 }
 
 /* Cards Container */
