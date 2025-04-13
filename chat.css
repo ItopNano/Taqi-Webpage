@@ -6,19 +6,44 @@ body{
     margin-top: 100px;
     border-radius: 50%;
 }
-#chatbox{
+#chatbox {
     height: 450px;
     width: 350px;
     border-radius: 20px;
     padding: 10px;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(92, 95, 255) transparent;
+    border-left: 5px solid #12153f52;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+}
+
+#chatbox::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chatbox::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#chatbox::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.4);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
 }
 
 
 
-.chatbox {
+
+
+.chatboxover {
     display: inline-block;
     margin-top: 20px;
-    padding: 15px 40px;
+    padding: 10px 15px;
     border: none;
     outline: none;
     color: #fff;
@@ -32,7 +57,7 @@ body{
       color 0.3s ease-in-out;
 }
 
-.chatbox::after {
+.chatboxover::after {
     content: "";
     z-index: -1;
     position: absolute;
@@ -44,7 +69,7 @@ body{
     border-radius: 10px;
 }
 
-.chatbox::before {
+.chatboxover::before {
     content: "";
     background: linear-gradient(
         45deg,
