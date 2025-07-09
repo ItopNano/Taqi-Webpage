@@ -16,6 +16,58 @@ body {
     color: rgb(115, 164, 255) !important;
 }
 
+#navbarSupportedContent{
+    margin-right: 100px;
+}
+
+/* o */
+
+.nav-link:hover {
+    color: rgb(115, 164, 255) !important;
+}
+.nav-link:active{
+    color: rgb(190, 255, 225) !important;
+}
+.nav-link:focus{
+    color: blue !important;
+    font-size: 18px;
+}
+.dropdown-menu li a:hover{
+    background: rgb(175, 190, 255);
+    color: blue;
+    opacity: .5;
+    z-index: 0;
+
+}
+.dropdown-menu li a:focus{
+    opacity: 1;
+    color: black;
+}
+.blinking {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+/* .profile-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 40px auto;
+    max-width: 800px;
+}
+h11, h22 {
+    color: #333;
+}
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+} */
+
+/* o */
+
 .dropdown-menu li a:hover {
     background: rgb(175, 190, 255);
     color: blue;
@@ -33,6 +85,52 @@ body {
     border-radius: 10px;
 }
 
+#button_search {
+    /* Text gradient animation */
+    background: linear-gradient(90deg, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200%;
+    background-position: 0%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 3s linear infinite;
+
+    /* Font styling */
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    /* text-transform: uppercase; */
+
+    /* Button sizing */
+    width: 110px;
+    padding: 5px 10px;
+    height: 38px;
+
+    /* Border and shadow */
+    border: 2px solid blueviolet;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(127, 76, 175, 0.4);
+
+    /* Background fallback for non-animated text */
+    background-color: transparent;
+
+    /* Cursor and transition */
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#button_search:hover {
+    border-color: #8f68ff;
+    background-color: rgba(143, 104, 255, 0.15);
+    box-shadow: 0 6px 12px rgba(127, 76, 175, 0.6);
+    border-radius: 8px;
+}
+
+
+#btn200:hover{
+    background-color: #109bf742;
+}
+
 .about_me {
     padding: 40px 20px;
     text-align: center;
@@ -43,6 +141,15 @@ body {
     display: inline-block;
     border-top: 4px solid #555;
     border-bottom: 4px solid #109af7;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200% auto;            
+    background-position: 0%;               
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+
     padding: 5px 0;
     font-size: 2rem;
     font-weight: 650;
@@ -141,22 +248,122 @@ body {
     margin: 20px auto;
 }
 
-.About_Profile_Resume a {
+.type-profilename {
     display: inline-block;
-    padding: 10px 20px;
-    font-size: 14px;
-    border: 2px solid rgb(182, 205, 255);
-    border-radius: 5px;
-    transition: 0.5s;
-    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid rgba(2, 0, 114, 0.699);
+    max-width: 0;
+    animation: typing 2s linear alternate infinite forwards, blink-caret 0.5s step-end infinite;
 }
 
-.About_Profile_Resume a:hover {
-    border: 2px solid rgb(71, 129, 255);
-    background-color: #8cd1ff;
+@keyframes typing {
+    from { max-width: 0; }
+    to { max-width: 100%; }
 }
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgba(2, 0, 114, 0.699); }
+}
+
+
+
+.About_Profile_Resume {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 5px;
+  align-items: center;
+}
+
+.a_profile_about{
+  width: 90px;
+  position: relative;
+  z-index: 1;
+  padding: 10px 23px;
+  font-size: 14px;
+  border: 2px solid rgb(182, 205, 255);
+  border-radius: 5px;
+  color: rgb(0, 81, 255);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  user-select: none;
+  white-space: nowrap;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.bt_Download {
+  position: relative;
+  z-index: 1;
+  padding: 10px 23px;
+  font-size: 14px;
+  border: 2px solid rgb(182, 205, 255);
+  border-radius: 5px;
+  color: rgb(0, 81, 255);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  user-select: none;
+  white-space: nowrap;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.a_profile_about:hover,
+.bt_Download:hover {
+  color: white;
+}
+
+.About_Profile_Resume span {
+  position: absolute;
+  top: 5px; 
+  left: 5px;
+  width: calc(20px + 2 * 20px + 50px);
+  height: 43px;
+  background-color: #86cfff;
+  border-radius: 5px;
+  opacity: 0;           
+  transition: left 0.4s ease, width 0.4s ease, opacity 0.3s ease;
+  z-index: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.bt_Download:hover ~ span {
+  left: 5px;
+  width: calc(2 * 20px + 73px);
+  opacity: 1;          
+}
+
+.a_profile_about:hover ~ span {
+  left: calc(
+    5px +
+    (2 * 20px + 75px) +
+    15px
+  );
+  width: calc(2 * 20px + 47px);
+  opacity: 1;         
+}
+
+
+
+
+
+
 
 @media (max-width: 1024px) {
+    .About_Profile_text{
+        font-size: 1.8rem;
+    }
     .about_title {
         font-size: 1.8rem;
     }
@@ -171,12 +378,22 @@ body {
         width: 200px;
         height: 200px;
     }
+    #typed-output{
+        font-size: 30px !important;
+    }
+    #blink-cursor{
+        font-size: 30px !important;
+    }
 }
 
 @media (max-width: 768px) {
+    .About_Profile_text{
+        font-size: 1.3rem;
+    }
     .about_title {
         font-size: 1.5rem;
     }
+
     .about_text {
         font-size: 0.9rem;
         padding: 0 15px;
@@ -189,9 +406,18 @@ body {
         width: 170px;
         height: 170px;
     }
+    #typed-output{
+        font-size: 30px !important;
+    }
+    #blink-cursor{
+        font-size: 30px !important;
+    }
 }
 
 @media (max-width: 480px) {
+    .About_Profile_text{
+        font-size: .9rem;
+    }
     .about_title {
         font-size: 1.3rem;
     }
@@ -207,9 +433,13 @@ body {
         width: 140px;
         height: 140px;
     }
+    #typed-output{
+        font-size: 30px !important;
+    }
+    #blink-cursor{
+        font-size: 30px !important;
+    }
 }
-
-
 
 
 .Skills {
@@ -218,14 +448,55 @@ body {
     margin-top: -350px;
 }
 
-.About_Skills_title {
+/* .About_Skills_title {
     display: inline-block;
     border-top: 4px solid #555;
     border-bottom: 4px solid #109af7;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+
     padding: 5px 0;
     font-size: 2rem;
     font-weight: 650;
 }
+
+@keyframes animate-gradient {
+    to {
+        background-position: 200%;
+    }
+} */
+
+.About_Skills_title {
+    display: inline-block;
+    border-top: 4px solid #555;
+    border-bottom: 4px solid #109af7;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff);
+    background-size: 200% auto;            /*! Added */
+    background-position: 0%;               /*! Added */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+
+    padding: 5px 0;
+    font-size: 2rem;
+    font-weight: 650;
+}
+
+@keyframes animate-gradient {
+    from {
+        background-position: 200%;
+    }
+    to {
+        background-position: 0%;
+    }
+}
+
 
 .About_Skills_text {
     max-width: 800px;
@@ -233,6 +504,22 @@ body {
     font-size: 1.2rem;
     line-height: 1.6;
 }
+
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+.hero-section {
+  filter: brightness(1.2);
+}
+
+
+
 
 
 
