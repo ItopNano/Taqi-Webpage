@@ -2,12 +2,12 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     if (typeof Typed !== 'undefined') { 
-        new Typed('#typed-output', {
+        new Typed('#typed_output100', {
             strings: [
                 "Hi, I am Taqi",
                 "with you",
                 "We are in",
-                "ItOP NanoSoft",
+                "Itop ProtoSoft!",
                 "We can buy, sell",
                 "and chat there."
                 // "I am a Web Designer",
@@ -26,6 +26,10 @@ document.getElementById("btn200").addEventListener("click", function() {
     document.querySelector(".about_me").scrollIntoView({ behavior: "smooth" });
 });
 
+// document.getElementById("login100").addEventListener("click", function() {
+//     document.querySelector(".about_me").scrollIntoView({ behavior: "smooth" });
+// });
+
 document.getElementById("Sa1").addEventListener("click", function() {
     document.querySelector(".Skills").scrollIntoView({ behavior: "smooth" });
 });
@@ -39,5 +43,6 @@ function downloadFile() {
   link.click();
   document.body.removeChild(link);
 }
+
 
 
