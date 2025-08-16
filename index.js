@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 "We are in",
                 "Itop ProtoSoft!",
                 "We can buy, sell",
-                "and chat there."
+                "and chat here."
                 // "I am a Web Designer",
                 // "I have 2 years of experience"
                 
@@ -43,6 +43,10 @@ function downloadFile() {
   link.click();
   document.body.removeChild(link);
 }
+
+
+
+
 
 
 
