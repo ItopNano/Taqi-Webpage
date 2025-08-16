@@ -578,14 +578,26 @@ ul {
         height: 120px;
     }
     .About_Profile_img::after, .About_Profile_img::before {
-        width: 140px;
-        height: 140px;
+        width: 125px;
+        height: 125px;
     }
     #typed_output100{
         font-size: 20px;
     }
     #blink-cursor{
         font-size: 30px;
+    }
+    #navbarDropdown li{
+        padding-left: 0%;    
+    }
+    #headinglinavalink li{
+        padding: 10px;
+    }
+    #right-heading{
+        padding-bottom: 10px;
+    }
+    #navbarSupportedContent{
+        margin-right: 0px;
     }
 }
 
@@ -665,10 +677,6 @@ ul {
 .hero-section {
   filter: brightness(1.2);
 }
-
-
-
-
 
 
 
